@@ -28,5 +28,17 @@
             "image": "/ISO/krd.iso",
             "backend": "/persistence/kaspersky.dat"
         }
-    ]
+    ],
+     "menu_tip":{
+     	"left": "10%",
+     	"top": "81%",
+     	"color": "blue",
+     	"tips":[
+     		{
+     			"image":"/ISO/krd.iso",
+     			"tip": "Boot to KRD first menu->Press c to go to the KRD GRUB2 prompt->Type set check_signatures=no ->ENTER->ESC"
+     		}
+
+     	]
+     }
 }
