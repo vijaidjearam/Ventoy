@@ -1,44 +1,32 @@
 {
-    "control": [
-        { "VTOY_DEFAULT_MENU_MODE": "0" },
+    "control":[
         { "VTOY_MAX_SEARCH_LEVEL": "0" },
-        { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" },  
-        { "VTOY_DEFAULT_IMAGE": "/ISO/clonezilla-live-2.7.3-19-amd64.iso" },   
-        { "VTOY_DEFAULT_KBD_LAYOUT": "FRENCH"}  
-    ],    
-     "auto_install": [
+        { "VTOY_DEFAULT_KBD_LAYOUT": "FRENCH" },
+        { "VTOY_DEFAULT_SEARCH_ROOT": "/ISO" }
+    ],
+    "auto_install":[
         {
-            "image": "/ISO/Windows27082021.iso",
-            "template": [
+            "image": "/ISO/Windows21H2-12012021.iso",
+            "template":[
                 "/ventoy/script/Autounattend-WinEdu.xml",
                 "/ventoy/script/Autounattend-WinPro.xml"
-            ],
-            "autosel": 2
+            ]
         },
         {
-            "image": "/ISO/Windows21H1.iso",
-            "template": [
+            "image": "/ISO/Windows-22H2-040123.iso",
+            "template":[
                 "/ventoy/script/Autounattend-WinEdu.xml",
+                "/ventoy/script/Autounattend-WinEdu-with-recovery.xml",
                 "/ventoy/script/Autounattend-WinPro.xml"
             ]
         }
     ],
-     "persistence": [
+    "persistence":[
         {
-            "image": "/ISO/krd.iso",
-            "backend": "/persistence/kaspersky.dat"
+            "image": "/ISO/linuxmint-20.2-cinnamon-64bit.iso",
+            "backend":[
+                "/persistence/Linux-mint_ext4_4GB_casper-rw.dat"
+            ]
         }
-    ],
-     "menu_tip":{
-     	"left": "10%",
-     	"top": "81%",
-     	"color": "blue",
-     	"tips":[
-     		{
-     			"image":"/ISO/krd.iso",
-     			"tip": "Boot to KRD first menu->Press c to go to the KRD GRUB2 prompt->Type set check_signatures=no ->ENTER->ESC"
-     		}
-
-     	]
-     }
+    ]
 }
